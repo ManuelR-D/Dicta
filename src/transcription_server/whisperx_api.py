@@ -1,6 +1,10 @@
 import os
 import sys
 from flask import Flask, request, jsonify, send_from_directory
+# Initialize Flask app
+app = Flask(__name__)
+# Set JSON encoder to ensure UTF-8 encoding without escaping non-ASCII characters
+app.json.ensure_ascii = False
 
 @app.route('/api/transcribe', methods=['POST'])
 def transcribe():

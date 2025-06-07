@@ -9,7 +9,6 @@ app = Flask(__name__)
 app.json.ensure_ascii = False
 
 
-
 @app.route('/api/predict-sentiment', methods=['POST'])
 def predict_sentiment():
     try:
